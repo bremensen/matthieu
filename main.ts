@@ -1,29 +1,63 @@
-input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        # . . . .
-        # . . . .
-        # . . . .
-        # . . . .
-        # . . . .
-        `)
+basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showLeds(`
+            # # # # #
+            . . . . .
+            # # # # #
+            . . . . .
+            # # # # #
+            `)
+        basic.pause(500)
+        basic.clearScreen()
+        basic.showLeds(`
+            . . . . .
+            # # # # #
+            . . . . .
+            # # # # #
+            . . . . .
+            `)
+        basic.pause(500)
+        basic.showLeds(`
+            # # # # #
+            . . . . .
+            # # # # #
+            . . . . .
+            # # # # #
+            `)
+        basic.clearScreen()
+    } else {
+    	
+    }
 })
 basic.forever(function () {
-    led.plotBarGraph(
-    input.soundLevel(),
-    0
-    )
-})
-basic.forever(function () {
-    basic.showString("Hello!")
-    basic.pause(100)
-    basic.showLeds(`
-        . # . # .
-        # . # . #
-        # . . . #
-        . # . # .
-        . . . . .
-        `)
-})
-basic.forever(function () {
-    basic.showIcon(IconNames.SmallHeart)
+    if (input.buttonIsPressed(Button.B)) {
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            `)
+        basic.pause(500)
+        basic.clearScreen()
+        basic.showLeds(`
+            # . # . #
+            # . # . #
+            # . # . #
+            # . # . #
+            # . # . #
+            `)
+        basic.pause(500)
+        basic.clearScreen()
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            . # . # .
+            `)
+        basic.clearScreen()
+    } else {
+    	
+    }
 })
